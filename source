@@ -60,7 +60,7 @@ Services = setmetatable({}, {
 	end
 })
 
-COREGUI = Services.CoreGui
+COREGUI = gethui()
 Players = Services.Players
 UserInputService = Services.UserInputService
 TweenService = Services.TweenService
@@ -90,6 +90,8 @@ TextChatService = Services.TextChatService
 CaptureService = Services.CaptureService
 VoiceChatService = Services.VoiceChatService
 SocialService = Services.SocialService
+
+setthreadidentity(2)
 
 IYMouse = cloneref(Players.LocalPlayer:GetMouse())
 PlayerGui = cloneref(Players.LocalPlayer:FindFirstChildWhichIsA("PlayerGui"))
