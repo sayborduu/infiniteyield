@@ -3,8 +3,6 @@ if IY_LOADED and not _G.IY_DEBUG then
 	return
 end
 
-setthreadidentity(8)
-
 pcall(function() getgenv().IY_LOADED = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
 
@@ -11610,6 +11608,7 @@ addcmd("chatlogswebhook", {"logswebhook"}, function(args, speaker)
 	updatesaves()
 end)
 
+--[[
 addcmd("antichatlogs", {"antichatlogger"}, function(args, speaker)
 	if not isLegacyChat then
 		return notify("antichatlogs", "Game needs the legacy chat")
@@ -11629,6 +11628,7 @@ addcmd("antichatlogs", {"antichatlogger"}, function(args, speaker)
 	end)
 	notify("antichatlogs", MessagePosted and "Enabled" or "Failed to enable antichatlogs")
 end)
+]]
 
 flinging = false
 addcmd('fling',{},function(args, speaker)
